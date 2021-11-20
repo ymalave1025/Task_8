@@ -116,69 +116,57 @@ var str = " \nHello World" ;
     /***********************************!!!!!!!!!!!!!********************************** */
   
 
-    //    write code that returns an array of ONLY prime numbers 
-    //that are in the array numbers
+    //    write code that returns an array of ONLY prime numbers that are in the array numbers
 
-    // for (var i=1; i<=100; i++){ 
-    //     (function FizzbuzzHelper(){ 
-    //     var n = i;
-    //         if (n%15==0){
-    //             console.log("FizzBuzz");
-    //         }
-    //         else if (n%5==0){
-    //             console.log("Buzz");
-    //         }
-    //         else if (n%3==0){                 
-    //             console.log("Fizz");   
-    //         }
-    //         else{
-    //             console.log(n);
-    //         }
-    //     })();
-    // };
-        // calling returnPrimeNumbers
-//         var result = fizzBuzz(num);
-// document.write(result);
-//console.log("***Showing numbers***");
+    function returnPrimeNumbers(){
+        const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        
+        var result = [];
+        var k = 0;
+        
+        for(var i = 0;i<numbers.length;i++){
+            
+            var isPrime = true;
+            
+            for(var j = 2;j<numbers[i];j++){
+            
+                if(numbers[i]%j==0){
+                    isPrime = false;
+                }
+            }
+            
+            if(isPrime){
+                if(numbers[i]!=1){
+                    result[k] = numbers[i];
+                    k++;
+                }
+            }
+        }
+        return result;
+    
+    }
+    returnPrimeNumbers();
           /*********************************************************************** */
 
-          function csc225Rules() {
-            // loop till i is less than equal 100
-            for(var i = 1; i <=100; ++i){
-
-                if(i % 15 === 0){
-               
-                       // console.log('Fizz Buzz');
-                       document.write('Fizz Buzz');
-                       document.write('<br/>');
-               
-                   }else if(i % 3 === 0){
-               
-                       // console.log('Fizz');
-                       document.write('Fizz');
-                       document.write('<br/>');
-               
-                   }else if(i % 5 === 0){
-               
-                       // console.log('Buzz');
-                       document.write('Buzz');
-                       document.write('<br/>');
-               
-                   }else{
-               
-                       // console.log(i);
-                       document.write(i);
-                       document.write('<br/>');
-                   }
-               }
-               
-            // calling csc225Rules
-           var result = csc225Rules();
-    // print the array.
-   // console.log(germanNumbers());
-    document.write(result);
-    document.write("<br>");        
+          function printMultiples() {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log("CSC225 RULES I LOVE JAVASCRIPT");
+                } else if (i % 3 === 0) {
+                    console.log("CSC225 RULES");
+                } else if (i % 5 === 0) {
+                    console.log("I LOVE JAVASCRIPT");
+                } else {
+                    console.log(i);
+                }
+            }
         }
+        
+        printMultiples();
+    // print the array.
+    // document.write(result);
+    // document.write("<br>");        
+    //     }
     
 
 
